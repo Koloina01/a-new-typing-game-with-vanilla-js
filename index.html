@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Test</title>
-</head>
-
-<body>
-    <header>
-        <h1>Typing Test</h1>
-        <label for="mode">Select Mode:</label>
-        <select id="mode">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
-    </header>
-
-    <main>
-        <p id="word-display"></p>
-        <input type="text" id="input-field" autofocus>
-        <p id="results">Results : </p>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Accueil | Typing Test</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css.map">
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body class="bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="./assets/logo vt.png" width="60" height="60" class="me-2" alt="Logo">
+            Typing Test
+            </a>
+            <div class="ms-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+            </ul>
+            </div>
+        </nav>
+        <section class="landing-section d-flex flex-column justify-content-center align-items-center text-center">
+            <img src="./assets/logo vt.png" class="landing-logo mb-4" alt="Logo principal">
+            <p class="lead text-secondary">Test your typing speed and accuracy with our fun and simple game!</p>
+            <a href="game.html" class="btn btn-primary mt-4 px-5 py-2 fs-5">Start game</a>
+        </section>
+    </body>
 </html>
