@@ -1,0 +1,23 @@
+
+#word-display span {
+    font-size: 1.2rem;
+    padding: 2px;
+  }
+
+  .correct {
+    color: green;
+  }
+
+  .incorrect {
+    color: red;
+    text-decoration: underline;
+  }
+
+  .current {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+
+  input:disabled {
+    background-color: #f8f9fa !important;
+  }

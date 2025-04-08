@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Typing Test</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css.map">
+        <link rel="stylesheet" href="game.css" />
+    </head>
+    <body class="bg-light">
+        <header class="mb-4">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4">
+            <a class="navbar-brand" href="#">Typing Test</a>
+            <div class="ms-auto">
+                <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+        <main class="container text-center">
+            <h2 class="mb-4">Test your typing speed</h2>
+
+            <div class="row justify-content-center mb-4">
+            <div class="col-md-4">
+                <label for="mode" class="form-label">Level :</label>
+                <select id="mode" class="form-select">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="word-count" class="form-label">Number of words :</label>
+                <input type="number" id="word-count" min="10" max="200" value="25" class="form-control" />
+            </div>
+            <div class="col-md-4 d-flex align-items-end">
+                <button onclick="startTest()" class="btn btn-primary w-100">Start the game</button>
+            </div>
+            </div>
+
+            <div class="card p-4 mb-4 shadow-sm">
+            <p id="word-display" class="text-start" style="min-height: 100px;"></p>
+            <input type="text" id="input-field" class="form-control mt-3"/>
+            </div>
+
+            <p id="results" class="fw-bold fs-5 text-success">Result :</p>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
