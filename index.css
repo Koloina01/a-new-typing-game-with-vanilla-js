@@ -1,27 +1,56 @@
 body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
   
-  .landing-section {
-    height: calc(100vh - 70px);
-    background: linear-gradient(135deg, #cce3ff, #f8f9fa);
-    padding-top: 20px;
-  }
+.landing-section {
+  height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #cce3ff, #f8f9fa);
+  padding-top: 20px;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+}
   
-  .landing-logo {
-    width: 450px;   
-    height: auto;
-    margin-bottom: 90px; 
-  }
+.landing-logo {
+  width: 450px;   
+  height: auto;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: relative;
+}
   
-  .landing-section p {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #6c757d;
-  }
+.landing-section p {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #f8f9fa;
+  z-index: 1;
+  position: relative;
+  max-width: 600px;
+}
+.landing-section img {
+  z-index: 1;
+  position: relative;
+  height: 100vh;
+  width: 40vw;
+}
   
-  .landing-section a.btn {
-    margin-top: 5px;
-  }
+.landing-section a.btn {
+  margin-top: 10px;
+  z-index: 1;
+  position: relative;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+}
+.header-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
