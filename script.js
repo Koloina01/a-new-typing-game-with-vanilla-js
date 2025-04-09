@@ -6,11 +6,10 @@
  * Sur ce... Amusez-vous bien ! 
  */
 let startTime = null;
-let currentCharIndex = 0;
+let currentWordIndex = 0;
 let totalTyped = 0;
 let correctTyped = 0;
 let testEnded = false;
-
 const wordsToType = [];
 
 const modeSelect = document.getElementById("mode");
@@ -40,7 +39,7 @@ function startTest() {
     wordsToType.length = 0;
     wordDisplay.innerHTML = "";
     inputField.value = "";
-    results.textContent = "Résultats :";    
+    results.textContent = "Result :";    
     currentCharIndex = 0;
     correctTyped = 0;
     totalTyped = 0;
@@ -49,7 +48,7 @@ function startTest() {
 
     const mode = modeSelect.value;
     const wordCount = parseInt(wordCountInput.value) || 25;
-    wordsToType.push(...getWords(mode, wordCount));
+    wordsToType.push(...getRandomWord(mode, wordCount));
 
     const allText = wordsToType.join(" ") + " ";
     for (let char of allText) {
