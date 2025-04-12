@@ -1,163 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Accueil | Typing Test</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/bootstrap.min.css.map">
-        <link rel="stylesheet" href="index.css" />
-        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-        <style>
-            .header-video {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                z-index: -1;
-            }
-            .header-content {
-                position: relative;
-                z-index: 1;
-                width: 100%;
-                height: 100vh;
-                display: flex;
-                flex-direction: column;
-            }
-
-            .typing-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-grow: 1; 
-                width: 100%;
-                flex-direction: column;
-                margin-top: -100px;
-            }
-
-            .text-container {
-                text-align: center;
-                color: white;
-                font-size: 2rem;
-                max-width: 800px;
-                padding: 20px;
-                text-shadow: 0 0 10px rgba(0,0,0,0.5);
-                margin-bottom: 2rem; /* Espacement ajouté avant le bouton */
-            }
-
-            .typed-text {
-                border-right: 3px solid white;
-                animation: blinkCursor 0.7s infinite;
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil | Typing Test</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="animation/animation.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-transparent">
+    <header class="position-relative w-100">
+        <video class="header-video" autoplay loop muted>
+            <source src="video/151196-800210471_large.mp4" type="video/mp4">
+        </video>
+        <div class="header-content">
+            <nav class="navbar navbar-expand-md fixed-top start-50 translate-middle-x bg-transparent rounded-pill w-75 mt-3 p-2">
+                <div class="container-fluid justify-content-center justify-content-md-between">
+                    <a class="navbar-brand d-flex align-items-center text-white me-md-4" href="#">
+                        <img src="image/logo vt.png" 
+                             alt="Logo" 
+                             class="rounded-circle object-fit-cover me-2" 
+                             width="32" 
+                             height="32">
+                        <span class="fs-4">Vanilla Typing</span>
+                    </a>
             
-            @keyframes blinkCursor {
-                from { border-right-color: white; }
-                to { border-right-color: transparent; }
-            }
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon text-white">
+                            <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+                        </span>
+                    </button>
             
-            .start-button {
-                margin-top: 1.5rem;
-                padding: 0.75rem 3rem;
-                font-size: 1.25rem;
-                border-radius: 50px;
-            }
-        </style>
-    </head>
-    <body class="bg-transparent">
-        <header class="position-relative w-100">
-            <video class="header-video" autoplay loop muted>
-                <source src="video/151196-800210471_large.mp4" type="video/mp4">
-            </video>
-            <div class="header-content">
-                <nav class="navbar navbar-expand-md fixed-top start-50 translate-middle-x bg-transparent rounded-pill w-75 mt-3 p-2">
-                    <div class="container-fluid justify-content-center justify-content-md-between">
-                        <!-- Logo + Titre -->
-                        <a class="navbar-brand d-flex align-items-center text-white me-md-4" href="#">
-                            <img src="image/logo vt.png" 
-                                 alt="Logo" 
-                                 class="rounded-circle object-fit-cover me-2" 
-                                 width="32" 
-                                 height="32">
-                            <span class="fs-4">Vanilla Typing</span>
-                        </a>
-                
-                        <!-- Menu pour mobile -->
-                        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                            <span class="navbar-toggler-icon text-white">
-                                <i class="bi bi-list" style="font-size: 1.5rem;"></i>
-                            </span>
-                        </button>
-                
-                        <!-- Liens de navigation -->
-                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active text-white" href="#">Active</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white-50" href="#">Link</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white-50" href="#">Link</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link disabled text-secondary" href="#">Disabled</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white" href="#">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white-50" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white-50" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled text-secondary" href="#">Disabled</a>
+                            </li>
+                        </ul>
                     </div>
-                </nav>
-                
-                <!-- Section combinée avec animation de texte et bouton seulement -->
-                <div class="typing-container" data-aos="fade-up">
-                    <div class="text-container">
-                        <h1 id="typed-text" class="typed-text"></h1>
-                    </div>
-                    <a href="game.html" class="btn btn-primary start-button">Start game</a>
                 </div>
+            </nav>
+            
+            <div class="typing-container" data-aos="fade-up">
+                <div class="text-container">
+                    <h1 id="typed-text" class="typed-text"></h1>
+                </div>
+                <a href="game.html" class="btn btn-primary start-button">Start game</a>
             </div>
-        </header>
-        
-    <!-- deuxieme section (2) -->
-        <div class="container-fluid w-100 pt-5 min-vh-100" style="background-color: #0a1a2f !important">
-            <div class="row align-items-center">
-                <div class="col-md-6 order-md-1 order-1 text-center p-4">
-                    <img class="img-fluid rounded-5" src="image/1.jpg" alt="" srcset="" data-aos="fade-right">
-                </div>
-                <div class="col-md-6 order-md-2 order-2 text-center text-md-start p-4">
-                    <div class="align-items-center justify-content-center p-md-5 m-md-4 text-white" data-aos="fade-up">
-                        <h1>Why Typing Matters</h1>
-                        <h2>With a global average typing speed of 40 WPM,
-                            Vanilla Typing helps you surpass this benchmark, crafting a skill that elevates both professional edge and daily efficiency.</h2>
-                    </div>
+        </div>
+    </header>
+    
+    <div class="container-fluid w-100 pt-5 min-vh-100" style="background-color: #0a1a2f !important">
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-1 order-1 text-center p-4">
+                <img class="img-fluid rounded-5" src="image/1.jpg" alt="" srcset="" data-aos="fade-right">
+            </div>
+            <div class="col-md-6 order-md-2 order-2 text-center text-md-start p-4">
+                <div class="align-items-center justify-content-center p-md-5 m-md-4 text-white" data-aos="fade-up">
+                    <h1>Why Typing Matters</h1>
+                    <h2>With a global average typing speed of 40 WPM,
+                        Vanilla Typing helps you surpass this benchmark, crafting a skill that elevates both professional edge and daily efficiency.</h2>
                 </div>
             </div>
         </div>
-        <!-- AOS JS -->
-        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-        <script>
-            const text = "Master touch typing with Vanilla Typing – the premier platform to refine your keyboard mastery.";
-            const typedTextElement = document.getElementById('typed-text');
-            let i = 0;
-            
-            function typeWriter() {
-                if (i < text.length) {
-                    typedTextElement.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, Math.random() * 50 + 50); 
-                } else {
-                    typedTextElement.style.animation = "blinkCursor 0.7s infinite";
-                }
-            }
+    </div>
 
-            window.onload = function() {
-                setTimeout(typeWriter, 1000); 
-            };
-
-            // Initialisation de AOS
-            AOS.init();
-        </script>
-    </body>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="animation/animation.js"></script>
+</body>
 </html>

@@ -118,3 +118,4 @@ function endTest() {
 
     results.textContent = `WPM = ${wpm.toFixed(2)}, Précision = ${accuracy.toFixed(2)}%`;
 }
+
