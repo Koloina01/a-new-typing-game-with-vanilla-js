@@ -11,12 +11,16 @@ let totalTyped = 0;
 let correctTyped = 0;
 let testEnded = false;
 const wordsToType = [];
+let timer = null;
+let Duration = 30;
+let timeLeft = Duration;
 
 const modeSelect = document.getElementById("mode");
 const wordCountInput = document.getElementById("word-count");
 const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
+const timerDisplay = document.getElementById("timer");
 
 const words = {
     easy: ["apple", "banana", "grape", "orange", "cherry"],
@@ -46,6 +50,10 @@ function startTest() {
     testEnded = false;
     startTime = null;
 
+    clearInterval(timer);
+    timeLeft = Duration;
+    timerDisplay.textContent = `Remainning time : ${timeLeft}s`;
+
     const mode = modeSelect.value;
     const wordCount = parseInt(wordCountInput.value) || 25;
     wordsToType.push(...getRandomWord(mode, wordCount));
@@ -63,7 +71,17 @@ function startTest() {
 
 inputField.addEventListener("keydown", (e) => {
     if (testEnded) return;
-    if (!startTime) startTime = Date.now();
+    if (!startTime) {
+        startTime = Date.now();
+        timer = setInterval(() => {
+            timeLeft--;
+            timerDisplay.textContent = `Remainning time : ${timeLeft}s`;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                endTest();
+            }
+        }, 1000);
+    }
 
     const spans = wordDisplay.children;
     e.preventDefault();
@@ -111,11 +129,13 @@ inputField.addEventListener("keydown", (e) => {
 // Calcule les statistiques globales
 function endTest() {
     testEnded = true;
+    clearInterval(timer);
     const elapsedTime = (Date.now() - startTime) / 1000;
     const wpm = (correctTyped / 5) / (elapsedTime / 60);
  // Calcule la précision caractère par caractère
     const accuracy = (correctTyped / totalTyped) * 100;
 
     results.textContent = `WPM = ${wpm.toFixed(2)}, Précision = ${accuracy.toFixed(2)}%`;
+    timerDisplay.textContent = "The time has expired !";
 }
 
