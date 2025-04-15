@@ -1,23 +1,117 @@
+* {
+  margin: 0 ;
+  padding: 0;
+}
+@font-face {
+  font-family: 'Hello-summer';
+  src: url('css/fonts/b0204b35-5e9b-4550-a783-e0f98214e047.otf') format('opentype');
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f0f, #3b0a75);
+  color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: none;
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.087) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-img {
+  height: 100px;
+  object-fit: contain;
+  border-color: #9d4edd;
+}
+
+.logo-text{
+  font-family: cursive;
+  font-size: 100px;
+}
+.navbar {
+  min-height: 100px;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.navbar-nav .nav-link {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 100px;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand span {
+  color: #fff !important;
+}
+
+.navbar .nav-link:hover {
+  color: #ddd !important;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-select,
+.form-control,
+.btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #7b2cbf;
+}
+
+.btn-primary:hover {
+  background-color: #9d4edd;
+}
+
+input:disabled {
+  background-color: #333 !important;
+  color: #aaa;
+}
 
 #word-display span {
-    font-size: 1.2rem;
-    padding: 2px;
-  }
+  font-size: 1.2rem;
+  padding: 2px;
+}
 
-  .correct {
-    color: green;
-  }
+.correct {
+  color: #00ff88;
+}
 
-  .incorrect {
-    color: red;
-    text-decoration: underline;
-  }
+.incorrect {
+  color: #ff4d4d;
+  text-decoration: underline;
+}
 
-  .current {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-  }
+.current {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
 
-  input:disabled {
-    background-color: #f8f9fa !important;
-  }
+.full-main {
+  width: 100%;
+  max-width: none;
+  padding: 2rem 4vw;
+}
+
+.full-main h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: '';
+}
+
