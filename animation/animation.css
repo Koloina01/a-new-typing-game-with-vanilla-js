@@ -71,7 +71,6 @@ body, html {
     color: white;
 }
 
-/* Navbar Styles */
 .navbar {
     z-index: 10;
     position: relative;
@@ -216,3 +215,68 @@ body, html {
 .text-white-75 {
     color: rgba(255, 255, 255, 0.75);
 }
+
+.equal-height-image-container {
+    height: 400px;
+    width: 100%;
+}
+
+.equal-height-glow {
+    height: 100%;
+    width: 100%;
+}
+
+.equal-height-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.equal-height-text-box {
+    height: 400px;
+    width: 100%;
+}
+.social-icon {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(45deg, #9d4edd, #6a00cc);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(106, 0, 204, 0.4);
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(157, 78, 221, 0.7);
+  }
+  
+  .hover-effect {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .hover-effect:hover {
+    color: white !important;
+    text-shadow: 0 0 8px rgba(157, 78, 221, 0.4);
+  }
+  
+  footer .form-control {
+    background: rgba(15, 23, 42, 0.5);
+    color: white;
+    border-radius: 50px 0 0 50px;
+    padding: 0.75rem 1.25rem;
+    backdrop-filter: blur(4px);
+  }
+  
+  footer .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  footer .btn {
+    border-radius: 0 50px 50px 0;
+  }
+  
+  footer hr {
+    background: linear-gradient(90deg, transparent, rgba(157, 78, 221, 0.5), transparent);
+    height: 1px;
+    border: none;
+  }
