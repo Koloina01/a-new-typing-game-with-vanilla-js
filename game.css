@@ -27,25 +27,27 @@ body {
 }
 
 .logo-img {
-  height: 100px;
-  object-fit: contain;
-  border-color: #9d4edd;
+  height: 90px;
+  width: auto;
 }
 
 .logo-text{
-  font-family: cursive;
-  font-size: 100px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
 }
 .navbar {
-  min-height: 100px;
-  display: flex !important;
-  align-items: center !important;
+  min-height: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .navbar-nav .nav-link {
-  padding-top: 0;
-  padding-bottom: 0;
-  line-height: 100px;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link {
+  font-size: 1.1rem;
 }
 
 .navbar .nav-link,
@@ -57,10 +59,9 @@ body {
   color: #ddd !important;
 }
 
-.navbar-nav {
+.navbar-nav, .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 1rem;
 }
 
 .form-select,
