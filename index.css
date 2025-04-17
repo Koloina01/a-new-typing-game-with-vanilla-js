@@ -70,3 +70,25 @@ body, html {
   object-fit: cover;
   z-index: 0;
 }
+.landing-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.big-logo {
+  width: 250px;
+  max-width: 80vw;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  transition: transform 0.3s ease;
+}
+.big-logo:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .big-logo {
+    width: 180px;
+  }
+}
