@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="animation/animation.css" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
   </head>
   <body class="bg-transparent">
     <header id="home" class="position-relative w-100">
@@ -19,7 +20,6 @@
         <nav class="navbar navbar-expand-md fixed-top start-50 translate-middle-x bg-transparent rounded-pill w-75 mt-3 p-2 blur-target transition-blur">
           <div class="container-fluid d-flex justify-content-between align-items-center">
             <a class="navbar-brand d-flex align-items-center text-white" href="#home">
-              <img src="assets/logo VT.png" alt="Logo" class="rounded-circle object-fit-cover me-2" width="100" height="100">
               <span class="fs-4">Vanilla Typing</span>
             </a>            
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -30,24 +30,23 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link active text-white" href="#home">Home</a>
+                  <a class="nav-link active text-white position-relative hover-effect" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white-50" href="#about">About</a>
+                  <a class="nav-link text-white-50 position-relative hover-effect" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white-50" href="#help">How to play</a>
+                  <a class="nav-link text-white-50 position-relative hover-effect" href="#help">How to play</a>
                 </li>
               </ul>
             </div>      
           </div>
-        </nav>  
+        </nav>
         <div class="landing-logo d-flex flex-column justify-content-center align-items-center text-center w-100 h-100" data-aos="fade-up">
-          <img src="assets/logo VT.png" alt="Big Logo" class="big-logo mb-4">
-          <h1 id="typed-text" class="typed-text text-white"></h1>
-          <a href="game.html" class="btn-primary card-button start-button text-white text-decoration-none">Start game</a>
-        </div>        
-      </div>
+          <img src="assets/logo VT.png" alt="Big Logo" class="big-logo mb-0"> 
+          <h1 id="typed-text" class="typed-text text-white mt-0 pt-0 pb-1"></h1>
+          <a href="game.html" class="btn-primary card-button start-button text-white text-decoration-none mt-2">Start game</a>
+        </div>
     </header>   
     <div id="about" class="container-fluid w-100 pt-5 min-vh-100 bg-gradient-dark">
       <div class="row align-items-center justify-content-center mt-4 pt-5 ">
@@ -150,8 +149,8 @@
               <li class="mb-2"><a href="#home" class="text-white-75 text-decoration-none hover-effect">Home</a></li>
               <li class="mb-2"><a href="#about" class="text-white-75 text-decoration-none hover-effect">About</a></li>
               <li class="mb-2"><a href="#help" class="text-white-75 text-decoration-none hover-effect">How It Works</a></li>
-              <li class="mb-2"><a href="#" class="text-white-75 text-decoration-none hover-effect">Pricing</a></li>
-              <li><a href="#" class="text-white-75 text-decoration-none hover-effect">Contact</a></li>
+              <li class="mb-2"><a href="" class="text-white-75 text-decoration-none hover-effect">Pricing</a></li>
+              <li><a href="" class="text-white-75 text-decoration-none hover-effect">+26110135498</a></li>
             </ul>
           </div>
           <div class="col-lg-2 col-md-4 col-6">
@@ -160,8 +159,8 @@
               <li class="mb-2"><a href="#" class="text-white-75 text-decoration-none hover-effect">Blog</a></li>
               <li class="mb-2"><a href="#tutorials" class="text-white-75 text-decoration-none hover-effect">Tutorials</a></li>
               <li class="mb-2"><a href="#stats" class="text-white-75 text-decoration-none hover-effect">Statistics</a></li>
-              <li class="mb-2"><a href="#" class="text-white-75 text-decoration-none hover-effect">FAQ</a></li>
-              <li><a href="#" class="text-white-75 text-decoration-none hover-effect">Support</a></li>
+              <li class="mb-2"><a href="" class="text-white-75 text-decoration-none hover-effect">FAQ</a></li>
+              <li><a href="" class="text-white-75 text-decoration-none hover-effect">Support</a></li>
             </ul>
           </div>
           <div class="col-lg-4 col-md-4">
@@ -169,8 +168,8 @@
             <p class="text-white-75 mb-3">Get typing tips, updates and special offers directly to your inbox</p>
             <form class="mb-3">
               <div class="input-group">
-                <input type="email" class="form-control border-0" placeholder="Your email address" aria-label="Your email address">
-                <button class="btn card-button px-3" type="submit">Subscribe</button>
+                <input type="email"class="form-control border-0 focus-ring focus-ring-light text-black"placeholder="Your email address"aria-label="Your email address">
+               <button class="btn card-button px-3" type="submit">Subscribe</button>
               </div>
             </form>
             <p class="text-white-75 small">By subscribing, you agree to our Privacy Policy</p>
