@@ -4,7 +4,14 @@
 }
 @font-face {
   font-family: 'Hello-summer';
-  src: url('css/fonts/b0204b35-5e9b-4550-a783-e0f98214e047.otf') format('opentype');
+  src: url('css/Hello-Summer.otf') format('opentype');
+  
+}
+
+h2 {
+  font-family: '#3b0a75';
+  font-size: 3rem;
+  color: white;
 }
 
 body {
@@ -115,4 +122,80 @@ input:disabled {
   font-weight: 600;
   font-family: '';
 }
+
+.text-start {
+  min-height: 300px;
+  font-size: 2rem;
+}
+
+#input-field {
+  background-color:transparent; 
+  color: white;
+  border: 1px solid #a39f9f;
+  border-radius: 20px;
+}
+
+#input-field:focus {
+  background-color: transparent; 
+  color: white;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #666; 
+}
+
+#word-count::placeholder {
+  color: #8d88886b; 
+  opacity: 1;
+}
+
+#mode,
+#mode option {
+  background-color: #1e1e2f;
+  color: white;
+  border: none;
+}
+
+#mode:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#word-count {
+  background-color: #1e1e2f;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 20px;
+}
+
+#word-count:focus {
+  background-color: #1e1e2f;
+  color: white;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #666;
+}
+
+#results {
+  font-size: 35px;
+}
+
+#timer {
+  font-size: 25px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#title {
+  font-family: 'Orbitron', sans-serif;
+  color: black;
+  background-color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  display: inline-block;
+}
+
+
+
+
+
 
