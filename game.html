@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css.map">
     <link rel="stylesheet" href="game.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
   <body>
     <header class="mb-4">
@@ -17,7 +18,8 @@
           <span class="fs-4 fw-semibold text-white logo-text mb-0">Typing Test</span>
         </a>
         <ul class="navbar-nav flex-row gap-3 mb-0">
-          <a href="index.html" class="btn-primary card-button start-button text-white text-decoration-none mt-2">Home page</a>
+          <a href="index.html#home" class="nav-link-blur mt-2">Home</a>
+          <a href="index.html#about" class="nav-link-blur mt-2">About</a>
         </ul>
       </nav>
     </header>    
@@ -45,7 +47,15 @@
         <p id="word-display" class="text-start"></p>
         <input type="text" id="input-field" class="form-control mt-3"/>
       </div>
-      <p id="results" class="fw-bold text-success">Result :</p>
+      <div id="result" class="d-flex justify-content-center align-items-center text-success fw-bold" id="results-container">
+        <div class="wrapper">
+          <a href="game.html" class="replay-icon">
+            <i class="fas fa-redo"></i>
+          </a>
+          <span class="text">Rejouer</span>
+        </div>        
+        <p id="results" class="mb-0">Result :</p>
+      </div>      
     </main>
     <script src="script.js"></script>
   </body>
