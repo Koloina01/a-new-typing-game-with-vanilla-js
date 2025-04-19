@@ -6,7 +6,7 @@
     <title>Typing Test</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css.map">
-    <link rel="stylesheet" href="game.css" />
+    <link rel="stylesheet" href="css/game.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
@@ -14,14 +14,24 @@
     <header class="mb-4">
       <nav class="navbar navbar-expand-lg px-4 align-items-center justify-content-between">
         <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="assets/logo VT.png" alt="Logo Typing Test" class="me-3 logo-img" />
+          <img src="image/logo VT.png" alt="Logo Typing Test" class="me-3 logo-img" />
           <span class="fs-4 fw-semibold text-white logo-text mb-0">Typing Test</span>
         </a>
-        <ul class="navbar-nav flex-row gap-3 mb-0">
-          <a href="index.html#home" class="nav-link-blur mt-2">Home</a>
-          <a href="index.html#about" class="nav-link-blur mt-2">About</a>
-        </ul>
-      </nav>
+        <button class="navbar-toggler ms-auto me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav flex-column flex-lg-row text-center gap-2 ms-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a href="index.html#home" class="nav-link nav-link-blur">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html#about" class="nav-link nav-link-blur">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>      
     </header>    
     <main class="text-center full-main">
       <h2 id="title" class="mb-4 text-white-50">Test your typing speed</h2>
@@ -57,6 +67,8 @@
         <p id="results" class="mb-0">Result :</p>
       </div>      
     </main>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
