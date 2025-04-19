@@ -79,13 +79,13 @@ body, html {
 .transition-blur {
   transition: backdrop-filter 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
+/* 
 .blur-navbar {
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.4) !important;
   transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
+} */
 
 .hover-effect::after {
   content: '';
